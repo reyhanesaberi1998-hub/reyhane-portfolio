@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="site_title">Reyhane Saberi — Portfolio & CV</title>
+  <style>
+    body{
+      font-family: "Times New Roman", Times, serif;
+      margin:0; color:#fff;
+      background:url("chondrocyte-bg.png") no-repeat center center fixed, linear-gradient(135deg,#1f1b4d 0%, #0f7da8 100%);
+      background-size:cover, cover; position:relative;
+    }
+    body::after{ content:""; position:fixed; inset:0; background:rgba(0,0,0,.55); z-index:0; pointer-events:none; }
+    header, section, footer{ max-width:900px; margin:auto; padding:20px; position:relative; z-index:1 }
+    header{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; border-bottom:1px solid rgba(255,255,255,.3) }
+    h1{ margin:0; font-size:28px }
+    h2{ margin-top:40px; font-size:22px }
+    .tag{ display:inline-block; background:rgba(255,255,255,.2); padding:4px 10px; border-radius:12px; margin:2px; font-size:13px }
+    ul{ line-height:1.7 }
+    a{ color:#aee4ff }
+    footer{ border-top:1px solid rgba(255,255,255,.3); margin-top:40px; font-size:14px; color:#ddd; text-align:center }
+    .lang{ display:flex; gap:8px; align-items:center }
+    .lang button{ border:1px solid rgba(255,255,255,.35); background:rgba(255,255,255,.08); color:#fff; padding:6px 10px; border-radius:10px; cursor:pointer }
+    .lang button.active{ background:#fff; color:#0f1b3a }
+    .gallery{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; margin-top:16px }
+    .gallery img{ width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.4); transition:transform .3s ease }
+    .gallery img:hover{ transform:scale(1.05) }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-info">
+      <h1 data-i18n="name">Reyhane Saberi</h1>
+      <p data-i18n="tagline">MSc Biotechnology Engineering · Sharif University of Technology</p>
+      <div>
+        <a href="mailto:reyhanesaberi1998@gmail.com" data-i18n="email_link">Email</a> ·
+        <a href="/cv.pdf" download data-i18n="download_cv">Download CV</a>
+      </div>
+    </div>
+    <div class="lang" aria-label="Language switcher">
+      <span style="opacity:.8" data-i18n="language">Language:</span>
+      <button id="btn-en" class="active">EN</button>
+      <button id="btn-de">DE</button>
+      <button id="btn-fr">FR</button>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2 data-i18n="about_title">About Me</h2>
+    <p data-i18n="about_p1"> ... </p>
+    <p data-i18n="about_p2"> ... </p>
+    <p data-i18n="about_p3"> ... </p>
+  </section>
+
+  <section id="gallery">
+    <h2 data-i18n="gallery_title">Lab Highlights</h2>
+    <div class="gallery">
+      <img src="lab1.jpg" alt="Working in the lab" />
+      <img src="lab2.jpg" alt="Experiment setup" />
+      <img src="lab3.jpg" alt="3D bioprinting process" />
+      <img src="lab4.jpg" alt="Cell culture work" />
+      <img src="lab5.jpg" alt="Microscopy analysis" />
+    </div>
+  </section>
+
+  <section id="education">
+    <h2 data-i18n="edu_title">Education</h2>
+    <ul>
+      <li data-i18n="edu_msc"> ... </li>
+      <li data-i18n="edu_bsc"> ... </li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2 data-i18n="exp_title">Experience</h2>
+    <ul>
+      <li data-i18n="exp_1"> ... </li>
+      <li data-i18n="exp_2"> ... </li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2 data-i18n="skills_title">Skills</h2>
+    <div>
+      <span class="tag" data-i18n="sk_1">Tissue Engineering</span>
+      <span class="tag" data-i18n="sk_2">3D Bioprinting</span>
+      <span class="tag" data-i18n="sk_3">Biomaterials</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 data-i18n="contact_title">Contact</h2>
+    <p><span data-i18n="contact_label">Email:</span> <a href="mailto:reyhanesaberi1998@gmail.com">reyhanesaberi1998@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> <span data-i18n="name">Reyhane Saberi</span></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const i18n = {
+      en: { about_p1:"I was born...", about_p2:"I devoted...", about_p3:"Today...", edu_msc:"MSc ...", edu_bsc:"BSc ...", exp_1:"Research Assistant...", exp_2:"Research Assistant..." },
+      de: { about_p1:"Ich wurde...", about_p2:"Ich widmete...", about_p3:"Heute...", edu_msc:"MSc ...", edu_bsc:"BSc ...", exp_1:"Wissenschaftliche...", exp_2:"Wissenschaftliche..." },
+      fr: { about_p1:"Je suis née...", about_p2:"Je me suis...", about_p3:"Aujourd’hui...", edu_msc:"MSc ...", edu_bsc:"Licence ...", exp_1:"Assistante...", exp_2:"Assistante..." }
+    };
+    function setLang(lang){
+      const dict = i18n[lang]; if(!dict) return;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(dict[key]) el.innerHTML=dict[key];
+      });
+      document.querySelectorAll('.lang button').forEach(b=>b.classList.remove('active'));
+      document.getElementById('btn-'+lang).classList.add('active');
+    }
+    document.getElementById('btn-en').onclick=()=>setLang('en');
+    document.getElementById('btn-de').onclick=()=>setLang('de');
+    document.getElementById('btn-fr').onclick=()=>setLang('fr');
+    setLang('en');
+  </script>
+</body>
+</html>

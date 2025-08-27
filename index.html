@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="site_title">Reyhane Saberi — Portfolio & CV</title>
+  <meta name="description" content="Portfolio and CV of Reyhane Saberi: MSc Biotechnology Engineering, research in tissue engineering, biomaterials, 3D bioprinting, and drug delivery." />
+  <style>
+    body{
+      font-family: "Times New Roman", Times, serif;
+      margin:0; color:#fff;
+      background:url("chondrocyte-bg.png") no-repeat center center fixed, linear-gradient(135deg,#1f1b4d 0%, #0f7da8 100%);
+      background-size:cover, cover; position:relative;
+    }
+    body::after{ content:""; position:fixed; inset:0; background:rgba(0,0,0,.55); z-index:0; pointer-events:none; }
+    header, section, footer{ max-width:900px; margin:auto; padding:20px; position:relative; z-index:1 }
+    header{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; border-bottom:1px solid rgba(255,255,255,.3) }
+    h1{ margin:0; font-size:28px }
+    h2{ margin-top:40px; font-size:22px }
+    .tag{ display:inline-block; background:rgba(255,255,255,.2); padding:4px 10px; border-radius:12px; margin:2px; font-size:13px }
+    ul{ line-height:1.7 }
+    a{ color:#aee4ff }
+    footer{ border-top:1px solid rgba(255,255,255,.3); margin-top:40px; font-size:14px; color:#ddd; text-align:center }
+    .lang{ display:flex; gap:8px; align-items:center }
+    .lang button{ border:1px solid rgba(255,255,255,.35); background:rgba(255,255,255,.08); color:#fff; padding:6px 10px; border-radius:10px; cursor:pointer }
+    .lang button.active{ background:#fff; color:#0f1b3a }
+    .gallery{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px; margin-top:16px }
+    .gallery img{ width:100%; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,.4); transition:transform .3s ease }
+    .gallery img:hover{ transform:scale(1.05) }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-info">
+      <h1 data-i18n="name">Reyhane Saberi</h1>
+      <p data-i18n="tagline">MSc Biotechnology Engineering · Sharif University of Technology</p>
+      <div>
+        <a href="mailto:reyhanesaberi1998@gmail.com" data-i18n="email_link">Email</a> ·
+        <a href="/cv.pdf" download data-i18n="download_cv">Download CV</a>
+      </div>
+    </div>
+    <div class="lang" aria-label="Language switcher">
+      <span style="opacity:.8" data-i18n="language">Language:</span>
+      <button id="btn-en" class="active">EN</button>
+      <button id="btn-de">DE</button>
+      <button id="btn-fr">FR</button>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2 data-i18n="about_title">About Me</h2>
+    <p data-i18n="about_p1"></p>
+    <p data-i18n="about_p2"></p>
+    <p data-i18n="about_p3"></p>
+  </section>
+
+  <section id="gallery">
+    <h2 data-i18n="gallery_title">Lab Highlights</h2>
+    <p data-i18n="gallery_desc"></p>
+    <div class="gallery">
+      <img src="lab1.jpg" alt="Working in the lab" />
+      <img src="lab2.jpg" alt="Experiment setup" />
+      <img src="lab3.jpg" alt="3D bioprinting process" />
+      <img src="lab4.jpg" alt="Cell culture work" />
+      <img src="lab5.jpg" alt="Microscopy analysis" />
+    </div>
+  </section>
+
+  <section id="education">
+    <h2 data-i18n="edu_title">Education</h2>
+    <ul>
+      <li data-i18n="edu_msc"></li>
+      <li data-i18n="edu_bsc"></li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2 data-i18n="exp_title">Experience</h2>
+    <ul>
+      <li data-i18n="exp_1"></li>
+      <li data-i18n="exp_2"></li>
+      <li data-i18n="exp_3"></li>
+      <li data-i18n="exp_4"></li>
+      <li data-i18n="exp_5"></li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2 data-i18n="pub_title">Publications</h2>
+    <ol>
+      <li data-i18n="pub_1"></li>
+    </ol>
+  </section>
+
+  <section id="projects">
+    <h2 data-i18n="proj_title">Projects</h2>
+    <ul>
+      <li data-i18n="proj_1"></li>
+      <li data-i18n="proj_2"></li>
+    </ul>
+  </section>
+
+  <section id="honors">
+    <h2 data-i18n="hon_title">Honors & Awards</h2>
+    <ul>
+      <li data-i18n="hon_1"></li>
+      <li data-i18n="hon_2"></li>
+      <li data-i18n="hon_3"></li>
+      <li data-i18n="hon_4"></li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2 data-i18n="skills_title">Skills</h2>
+    <div>
+      <span class="tag" data-i18n="sk_1"></span>
+      <span class="tag" data-i18n="sk_2"></span>
+      <span class="tag" data-i18n="sk_3"></span>
+      <span class="tag" data-i18n="sk_4"></span>
+      <span class="tag" data-i18n="sk_5"></span>
+      <span class="tag" data-i18n="sk_6"></span>
+      <span class="tag" data-i18n="sk_7"></span>
+      <span class="tag" data-i18n="sk_8"></span>
+      <span class="tag" data-i18n="sk_9"></span>
+      <span class="tag" data-i18n="sk_10"></span>
+      <span class="tag" data-i18n="sk_11"></span>
+      <span class="tag" data-i18n="sk_12"></span>
+    </div>
+  </section>
+
+  <section id="workshops">
+    <h2 data-i18n="ws_title">Workshops</h2>
+    <ul>
+      <li data-i18n="ws_1"></li>
+      <li data-i18n="ws_2"></li>
+      <li data-i18n="ws_3"></li>
+      <li data-i18n="ws_4"></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2 data-i18n="contact_title">Contact</h2>
+    <p><span data-i18n="contact_label"></span> <a href="mailto:reyhanesaberi1998@gmail.com">reyhanesaberi1998@gmail.com</a></p>
+  </section>
+
+  <footer>
+    <p>© <span id="year"></span> <span data-i18n="name">Reyhane Saberi</span></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const i18n = {
+      en: {
+        site_title:"Reyhane Saberi — Portfolio & CV",
+        name:"Reyhane Saberi",
+        tagline:"MSc Biotechnology Engineering · Sharif University of Technology",
+        email_link:"Email",
+        download_cv:"Download CV",
+        language:"Language:",
+        about_title:"About Me",
+        about_p1:"I was born into a family where my mother was a physician and my father an engineer—a combination that nurtured my early passion for both biology and mathematics. I chose the mathematical path first and studied Chemical Engineering, where I discovered the powerful intersection of engineering and biology that sparked my dedication to biotechnology and tissue engineering.",
+        about_p2:"I devoted myself to my studies, achieved the top national entrance rank, and joined Sharif University of Technology. I actively pursued research opportunities and, with persistence, joined the Royan Institute to contribute to projects in regenerative medicine.",
+        about_p3:"Today I am eager to expand my horizons beyond my country’s borders—learning from world‑class teams and exploring new frontiers in biotechnology and regenerative medicine, while bringing back knowledge that advances health outcomes.",
+        gallery_title:"Lab Highlights", gallery_desc:"A few moments from my research and experiments in the lab:",
+        edu_title:"Education",
+        edu_msc:"MSc, Biotechnology Engineering — Sharif University of Technology (2022–present). Thesis: Development and characterization of 3D‑printing bioinks for cartilage tissue engineering. Supervisors: Prof. Shohre Mashayekhan, Prof. Soheila Yaghmaei.",
+        edu_bsc:"BSc, Chemical Engineering (Biotechnology) — Isfahan University of Technology (2017–2021). Thesis: A review of common materials and methods in cartilage scaffolds. Supervisors: Prof. Hamid Zilouei, Prof. Saied Nouri Khorasani. GPA: 3.29/4 (Specialized courses: 4/4).",
+        exp_title:"Experience",
+        exp_1:"Research Assistant, Stem Cells Lab, Sharif University of Technology (2022–present) — ISI manuscript review, experimental support, student supervision, Mimics training.",
+        exp_2:"Research Assistant, Dept. of Biomaterials & Tissue Engineering, Isfahan University of Medical Sciences (2021–2022).",
+        exp_3:"Intern, Royan Institute, Dept. of Animal Biotechnology — Controlled‑release anticancer drugs, FTIR/ATR tests, nanoparticles, liposomes, in‑vivo experiments.",
+        exp_4:"R&D Engineer, Biotex Innovation Factory (2022–2023) — Lipase enzyme design.",
+        exp_5:"Teaching Assistant, Sharif University of Technology — Biochemical Engineering (Fall 2024), Unit Operations (Spring 2024).",
+        pub_title:"Publications",
+        pub_1:"S. Ghasemi, A. Alibabaie, R. Saberi, et al. (2023). Evaluation of zein incorporation on electrospun PHB scaffolds for bone tissue engineering. International Journal of Biological Macromolecules, 253:126843. DOI: 10.1016/j.ijbiomac.2023.126843",
+        proj_title:"Ongoing Projects", proj_1:"Structure engineering of nanocomposites for bone disease treatment.", proj_2:"Advanced dual‑nozzle bioprinting of silk fibroin hydrogel & PCL for meniscus tissue engineering.",
+        hon_title:"Honors & Awards", hon_1:"1st rank among 20,000+ in Iran’s MSc entrance exam (2022).", hon_2:"Top 10% of BSc in Chemical Engineering, Isfahan University of Technology (2021).", hon_3:"Top 1% among 200,000+ in the National University Entrance Exam (2017).", hon_4:"Organizer, Bioprinting & Microfluidics Workshop at ICCE (2023).",
+        skills_title:"Skills", sk_1:"Tissue Engineering", sk_2:"3D Bioprinting", sk_3:"Biomaterials", sk_4:"Drug Delivery", sk_5:"MATLAB", sk_6:"OriginPro", sk_7:"GraphPad Prism", sk_8:"Mimics", sk_9:"SolidWorks", sk_10:"AutoCAD", sk_11:"Cura/Simplify3D", sk_12:"Aspen HYSYS",
+        ws_title:"Workshops", ws_1:"Cell culture & cryopreservation — Royan (2024)", ws_2:"Nanoparticles design & manufacture — Royan (2023)", ws_3:"Microfluidic masks — Isfahan U. Tech (2021)", ws_4:"MATLAB workshop — IUT (2019)",
+        contact_title:"Contact", contact_label:"Email:"
+      },
+      de: {
+        site_title:"Reyhane Saberi — Portfolio & Lebenslauf",
+        name:"Reyhane Saberi",
+        tagline:"MSc Biotechnik · Sharif University of Technology",
+        email_link:"E‑Mail",
+        download_cv:"Lebenslauf herunterladen",
+        language:"Sprache:",
+        about_title:"Über mich",
+        about_p1:"Ich wurde in eine Familie geboren, in der meine Mutter Ärztin und mein Vater Ingenieur war – eine Kombination, die früh meine Leidenschaft für Biologie und Mathematik förderte. Zunächst wählte ich den mathematischen Weg und studierte Chemieingenieurwesen, wo ich die starke Schnittstelle zwischen Technik und Biologie entdeckte, die mein Engagement für Biotechnologie und Tissue Engineering entfachte.",
+        about_p2:"Ich widmete mich meinem Studium, erreichte den landesweit besten Aufnahmerang und wechselte an die Sharif University of Technology. Aktiv suchte ich nach Forschungsmöglichkeiten und schloss mich mit Ausdauer dem Royan Institute an, um zu Projekten der regenerativen Medizin beizutragen.",
+        about_p3:"Heute möchte ich meinen Horizont über die Grenzen meines Landes hinaus erweitern – von Weltklasse‑Teams lernen und neue Fronten in Biotechnologie und regenerativer Medizin erkunden, um Wissen zurückzubringen, das die Gesundheits­ergebnisse verbessert.",
+        gallery_title:"Labor‑Highlights", gallery_desc:"Einige Momente aus meiner Laborarbeit:",
+        edu_title:"Ausbildung",
+        edu_msc:"MSc, Biotechnik — Sharif University of Technology (2022–heute). These: Entwicklung und Charakterisierung von 3D‑Druck‑Bioinks für die Knorpel‑Gewebetechnik. Betreuerinnen: Prof. Shohre Mashayekhan, Prof. Soheila Yaghmaei.",
+        edu_bsc:"BSc, Chemieingenieurwesen (Biotechnologie) — Isfahan University of Technology (2017–2021). Überblick über Materialien und Methoden in Knorpel‑Gerüsten. Betreuer: Prof. Hamid Zilouei, Prof. Saied Nouri Khorasani. GPA: 3,29/4 (Spezialfächer: 4/4).",
+        exp_title:"Erfahrung",
+        exp_1:"Wissenschaftliche Hilfskraft, Stammzell‑Labor, Sharif University of Technology (2022–heute) — ISI‑Manuskripte geprüft, Experimente unterstützt, Studierende betreut, Mimics gelehrt.",
+        exp_2:"Wissenschaftliche Hilfskraft, Institut für Biomaterialien & Tissue Engineering, Isfahan University of Medical Sciences (2021–2022).",
+        exp_3:"Praktikum, Royan Institute, Abt. Tier‑Biotechnologie — Kontrollierte Wirkstofffreisetzung, FTIR/ATR, Nanopartikel, Liposomen, In‑vivo‑Experimente.",
+        exp_4:"F&E‑Ingenieurin, Biotex Innovation Factory (2022–2023) — Lipase‑Enzymdesign.",
+        exp_5:"Tutorin, Sharif University of Technology — Biochemical Engineering (WS 2024), Unit Operations (SS 2024).",
+        pub_title:"Publikationen",
+        pub_1:"S. Ghasemi, A. Alibabaie, R. Saberi u. a. (2023). Bewertung der Zein‑Einbindung in elektrogesponnene PHB‑Gerüste für die Knochen‑Gewebetechnik. International Journal of Biological Macromolecules, 253:126843. DOI: 10.1016/j.ijbiomac.2023.126843",
+        proj_title:"Laufende Projekte", proj_1:"Struktur­engineering von Nanokompositen zur Behandlung von Knochenerkrankungen.", proj_2:"Dual‑Nozzle Bioprinting von Seidenfibroin‑Hydrogel & PCL für die Meniskus‑Gewebetechnik.",
+        hon_title:"Auszeichnungen", hon_1:"1. Platz unter 20.000+ im landesweiten MSc‑Aufnahme­examen (2022).", hon_2:"Top 10 % im BSc Chemieingenieurwesen, Isfahan University of Technology (2021).", hon_3:"Top 1 % unter 200.000+ im nationalen Uni‑Aufnahme­examen (2017).", hon_4:"Organisatorin, Workshop Bioprinting & Microfluidics auf der ICCE (2023).",
+        skills_title:"Fähigkeiten", sk_1:"Tissue Engineering", sk_2:"3D Bioprinting", sk_3:"Biomaterialien", sk_4:"Drug Delivery", sk_5:"MATLAB", sk_6:"OriginPro", sk_7:"GraphPad Prism", sk_8:"Mimics", sk_9:"SolidWorks", sk_10:"AutoCAD", sk_11:"Cura/Simplify3D", sk_12:"Aspen HYSYS",
+        ws_title:"Workshops", ws_1:"Zellkultur & Kryokonservierung — Royan (2024)", ws_2:"Design & Herstellung von Nanopartikeln — Royan (2023)", ws_3:"Mikrofluidische Masken — Isfahan U. Tech (2021)", ws_4:"MATLAB‑Workshop — IUT (2019)",
+        contact_title:"Kontakt", contact_label:"E‑Mail:"
+      },
+      fr: {
+        site_title:"Reyhane Saberi — Portfolio & CV",
+        name:"Reyhane Saberi",
+        tagline:"MSc en Biotechnologie · Sharif University of Technology",
+        email_link:"E‑mail",
+        download_cv:"Télécharger le CV",
+        language:"Langue :",
+        about_title:"À propos de moi",
+        about_p1:"Je suis née dans une famille où ma mère était médecin et mon père ingénieur – une combinaison qui a éveillé très tôt ma passion pour la biologie et les mathématiques. J’ai d’abord suivi la voie mathématique et étudié le génie chimique, où j’ai découvert l’intersection forte entre l’ingénierie et la biologie, ce qui a déclenché mon engagement pour la biotechnologie et la Tissue Engineering.",
+        about_p2:"Je me suis consacrée pleinement à mes études, obtenant le premier rang national et rejoignant la Sharif University of Technology. J’ai saisi des opportunités de recherche et, avec persévérance, j’ai intégré l’Institut Royan pour contribuer à des projets en médecine régénérative.",
+        about_p3:"Aujourd’hui, je souhaite élargir mes horizons au‑delà des frontières de mon pays — apprendre auprès d’équipes de renommée mondiale et explorer de nouveaux fronts en biotechnologie et en médecine régénérative, tout en rapportant un savoir utile pour améliorer la santé publique.",
+        gallery_title:"Moments du laboratoire", gallery_desc:"Quelques instants de mes recherches et expériences au laboratoire :",
+        edu_title:"Formation",
+        edu_msc:"MSc, Biotechnologie — Sharif University of Technology (2022–présent). Thèse : Développement et caractérisation de bio‑encres 3D pour l’ingénierie du cartilage. Encadrement : Prof. Shohre Mashayekhan, Prof. Soheila Yaghmaei.",
+        edu_bsc:"Licence, Génie chimique (Biotechnologie) — Isfahan University of Technology (2017–2021). Mémoire : Revue des matériaux et méthodes utilisés dans les échafaudages cartilagineux. Encadrants : Prof. Hamid Zilouei, Prof. Saied Nouri Khorasani. GPA : 3,29/4 (cours spécialisés : 4/4).",
+        exp_title:"Expériences",
+        exp_1:"Assistante de recherche, Stem Cells Lab, Sharif University of Technology (2022–présent) — Relecture d’articles ISI, support expérimental, encadrement d’étudiants, enseignement de Mimics.",
+        exp_2:"Assistante de recherche, Biomaterials & Tissue Engineering, Isfahan University of Medical Sciences (2021–2022).",
+        exp_3:"Stagiaire, Royan Institute, Département de biotechnologie animale — Libération contrôlée d’anticancéreux, tests FTIR/ATR, nanoparticules, liposomes, expériences in vivo.",
+        exp_4:"Ingénieure R&D, Biotex Innovation Factory (2022–2023) — Conception d’enzyme lipase.",
+        exp_5:"Chargée de TD, Sharif University of Technology — Biochemical Engineering (automne 2024), Unit Operations (printemps 2024).",
+        pub_title:"Publications",
+        pub_1:"S. Ghasemi, A. Alibabaie, R. Saberi et al. (2023). Évaluation de l’incorporation de la zéine dans des échafaudages PHB électrofilés pour la Tissue Engineering osseuse. International Journal of Biological Macromolecules, 253:126843. DOI : 10.1016/j.ijbiomac.2023.126843",
+        proj_title:"Projets en cours", proj_1:"Structure engineering de nanocomposites pour le traitement des maladies osseuses.", proj_2:"Dual‑nozzle Bioprinting d’hydrogel de fibroïne de soie & PCL pour l’ingénierie du ménisque.",
+        hon_title:"Distinctions", hon_1:"1ère place parmi 20 000+ à l’examen national d’entrée en MSc (2022).", hon_2:"Top 10 % en Licence de génie chimique, Isfahan University of Technology (2021).", hon_3:"Top 1 % parmi 200 000+ au concours national d’entrée à l’université (2017).", hon_4:"Organisatrice, atelier Bioprinting & Microfluidics à l’ICCE (2023).",
+        skills_title:"Compétences", sk_1:"Tissue Engineering", sk_2:"3D Bioprinting", sk_3:"Biomaterials", sk_4:"Drug Delivery", sk_5:"MATLAB", sk_6:"OriginPro", sk_7:"GraphPad Prism", sk_8:"Mimics", sk_9:"SolidWorks", sk_10:"AutoCAD", sk_11:"Cura/Simplify3D", sk_12:"Aspen HYSYS",
+        ws_title:"Ateliers", ws_1:"Culture cellulaire & cryoconservation — Royan (2024)", ws_2:"Conception & fabrication de nanoparticules — Royan (2023)", ws_3:"Masques microfluidiques — Isfahan U. Tech (2021)", ws_4:"Atelier MATLAB — IUT (2019)",
+        contact_title:"Contact", contact_label:"E‑mail :"
+      }
+    };
+    function setLang(lang){
+      const dict = i18n[lang]; if(!dict) return;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const key = el.getAttribute('data-i18n');
+        if(dict[key] !== undefined){
+          if(el.tagName === 'TITLE') el.textContent = dict[key];
+          else el.innerHTML = dict[key];
+        }
+      });
+      document.querySelectorAll('.lang button').forEach(b=>b.classList.remove('active'));
+      const btn = document.getElementById('btn-'+lang); if(btn) btn.classList.add('active');
+    }
+    document.getElementById('btn-en').onclick=()=>setLang('en');
+    document.getElementById('btn-de').onclick=()=>setLang('de');
+    document.getElementById('btn-fr').onclick=()=>setLang('fr');
+    setLang('en');
+  </script>
+</body>
+</html>
